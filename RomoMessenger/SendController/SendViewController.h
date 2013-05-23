@@ -6,10 +6,10 @@
 //  Copyright (c) 2013 University of Waterloo. All rights reserved.
 //
 
-#import "FlipsideViewController.h"
+#import "SendSettingsViewController.h"
 
-@interface MainViewController : UIViewController <FlipsideViewControllerDelegate>
+@interface SendViewController : UIViewController <SendSettingsViewControllerDelegate>
 
-- (IBAction)showInfo:(id)sender;
+- (IBAction)showSettings:(id)sender;
 
 @end

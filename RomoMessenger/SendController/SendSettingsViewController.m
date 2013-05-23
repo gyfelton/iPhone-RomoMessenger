@@ -6,13 +6,14 @@
 //  Copyright (c) 2013 University of Waterloo. All rights reserved.
 //
 
-#import "FlipsideViewController.h"
+#import "SendSettingsViewController.h"
+#import "AppDelegate.h"
 
-@interface FlipsideViewController ()
+@interface SendSettingsViewController ()
 
 @end
 
-@implementation FlipsideViewController
+@implementation SendSettingsViewController
 
 - (void)viewDidLoad
 {
@@ -30,7 +31,13 @@
 
 - (IBAction)done:(id)sender
 {
-    [self.delegate flipsideViewControllerDidFinish:self];
+    [self.delegate sendSettingsViewControllerDidFinish:self];
+}
+
+- (IBAction)onSwitchToRomoClicked:(id)sender {
+    [self.delegate sendSettingsViewControllerDidFinish:self];
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    [appDelegate switchToRomoViewController];
 }
 
 @end

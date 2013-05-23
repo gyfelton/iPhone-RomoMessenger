@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 University of Waterloo. All rights reserved.
 //
 
-#import "MainViewController.h"
+#import "SendViewController.h"
 
-@interface MainViewController ()
+@interface SendViewController ()
 
 @end
 
-@implementation MainViewController
+@implementation SendViewController
 
 - (void)viewDidLoad
 {
@@ -28,14 +28,14 @@
 
 #pragma mark - Flipside View
 
-- (void)flipsideViewControllerDidFinish:(FlipsideViewController *)controller
+- (void)sendSettingsViewControllerDidFinish:(SendSettingsViewController *)controller
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:NO completion:nil];
 }
 
-- (IBAction)showInfo:(id)sender
+- (IBAction)showSettings:(id)sender
 {    
-    FlipsideViewController *controller = [[FlipsideViewController alloc] initWithNibName:@"FlipsideViewController" bundle:nil];
+    SendSettingsViewController *controller = [[SendSettingsViewController alloc] initWithNibName:nil bundle:nil];
     controller.delegate = self;
     controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     [self presentViewController:controller animated:YES completion:nil];

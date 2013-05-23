@@ -8,16 +8,28 @@
 
 #import "AppDelegate.h"
 
-#import "MainViewController.h"
+#import "SendViewController.h"
+#import "RomoViewController.h"
 
 @implementation AppDelegate
+
+- (void)switchToRomoViewController
+{
+    UIViewController *controller = [[RomoViewController alloc] initWithNibName:nil bundle:nil];
+    self.window.rootViewController = controller;
+}
+
+- (void)switchToSendViewController
+{
+    UIViewController *controller = [[SendViewController alloc] initWithNibName:nil bundle:nil];
+    self.window.rootViewController = controller;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.mainViewController = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
-    self.window.rootViewController = self.mainViewController;
+    [self switchToRomoViewController];
     [self.window makeKeyAndVisible];
     return YES;
 }
