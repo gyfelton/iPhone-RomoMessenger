@@ -7,10 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC7213A7174DC0C200B65643 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FC7213A4174DC0C200B65643 /* NetworkManager.m */; };
+		FC7213A8174DC0C200B65643 /* QNetworkAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FC7213A6174DC0C200B65643 /* QNetworkAdditions.m */; };
+		FC80A01E175536D50053D252 /* R3UI-Expression-10@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC80A010175536D50053D252 /* R3UI-Expression-10@2x.png */; };
+		FC80A01F175536D50053D252 /* R3UI-Expression-12@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC80A011175536D50053D252 /* R3UI-Expression-12@2x.png */; };
+		FC80A020175536D50053D252 /* R3UI-Expression-14@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC80A012175536D50053D252 /* R3UI-Expression-14@2x.png */; };
+		FC80A021175536D50053D252 /* R3UI-Expression-15@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC80A013175536D50053D252 /* R3UI-Expression-15@2x.png */; };
+		FC80A022175536D50053D252 /* R3UI-Expression-19@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC80A014175536D50053D252 /* R3UI-Expression-19@2x.png */; };
+		FC80A023175536D50053D252 /* R3UI-Expression-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC80A015175536D50053D252 /* R3UI-Expression-1@2x.png */; };
+		FC80A024175536D50053D252 /* R3UI-Expression-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC80A016175536D50053D252 /* R3UI-Expression-2@2x.png */; };
+		FC80A025175536D50053D252 /* R3UI-Expression-3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC80A017175536D50053D252 /* R3UI-Expression-3@2x.png */; };
+		FC80A026175536D50053D252 /* R3UI-Expression-4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC80A018175536D50053D252 /* R3UI-Expression-4@2x.png */; };
+		FC80A027175536D50053D252 /* R3UI-Expression-5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC80A019175536D50053D252 /* R3UI-Expression-5@2x.png */; };
+		FC80A028175536D50053D252 /* R3UI-Expression-6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC80A01A175536D50053D252 /* R3UI-Expression-6@2x.png */; };
+		FC80A029175536D50053D252 /* R3UI-Expression-7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC80A01B175536D50053D252 /* R3UI-Expression-7@2x.png */; };
+		FC80A02A175536D50053D252 /* R3UI-Expression-8@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC80A01C175536D50053D252 /* R3UI-Expression-8@2x.png */; };
+		FC80A02B175536D50053D252 /* R3UI-Dpad.png in Resources */ = {isa = PBXBuildFile; fileRef = FC80A01D175536D50053D252 /* R3UI-Dpad.png */; };
+		FCDABFC8174EF6640084D609 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCDABFC7174EF6640084D609 /* CFNetwork.framework */; };
 		FE0F52C6174DB2D30069AA51 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE0F52C5174DB2D30069AA51 /* UIKit.framework */; };
 		FE0F52C8174DB2D30069AA51 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE0F52C7174DB2D30069AA51 /* Foundation.framework */; };
 		FE0F52CA174DB2D30069AA51 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE0F52C9174DB2D30069AA51 /* CoreGraphics.framework */; };
-		FE0F52D0174DB2D30069AA51 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FE0F52CE174DB2D30069AA51 /* InfoPlist.strings */; };
 		FE0F52D2174DB2D30069AA51 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0F52D1174DB2D30069AA51 /* main.m */; };
 		FE0F52D6174DB2D30069AA51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0F52D5174DB2D30069AA51 /* AppDelegate.m */; };
 		FE0F52D8174DB2D30069AA51 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = FE0F52D7174DB2D30069AA51 /* Default.png */; };
@@ -27,12 +43,36 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC7213A3174DC0C200B65643 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
+		FC7213A4174DC0C200B65643 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
+		FC7213A5174DC0C200B65643 /* QNetworkAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNetworkAdditions.h; sourceTree = "<group>"; };
+		FC7213A6174DC0C200B65643 /* QNetworkAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QNetworkAdditions.m; sourceTree = "<group>"; };
+		FC80A010175536D50053D252 /* R3UI-Expression-10@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "R3UI-Expression-10@2x.png"; sourceTree = "<group>"; };
+		FC80A011175536D50053D252 /* R3UI-Expression-12@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "R3UI-Expression-12@2x.png"; sourceTree = "<group>"; };
+		FC80A012175536D50053D252 /* R3UI-Expression-14@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "R3UI-Expression-14@2x.png"; sourceTree = "<group>"; };
+		FC80A013175536D50053D252 /* R3UI-Expression-15@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "R3UI-Expression-15@2x.png"; sourceTree = "<group>"; };
+		FC80A014175536D50053D252 /* R3UI-Expression-19@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "R3UI-Expression-19@2x.png"; sourceTree = "<group>"; };
+		FC80A015175536D50053D252 /* R3UI-Expression-1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "R3UI-Expression-1@2x.png"; sourceTree = "<group>"; };
+		FC80A016175536D50053D252 /* R3UI-Expression-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "R3UI-Expression-2@2x.png"; sourceTree = "<group>"; };
+		FC80A017175536D50053D252 /* R3UI-Expression-3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "R3UI-Expression-3@2x.png"; sourceTree = "<group>"; };
+		FC80A018175536D50053D252 /* R3UI-Expression-4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "R3UI-Expression-4@2x.png"; sourceTree = "<group>"; };
+		FC80A019175536D50053D252 /* R3UI-Expression-5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "R3UI-Expression-5@2x.png"; sourceTree = "<group>"; };
+		FC80A01A175536D50053D252 /* R3UI-Expression-6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "R3UI-Expression-6@2x.png"; sourceTree = "<group>"; };
+		FC80A01B175536D50053D252 /* R3UI-Expression-7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "R3UI-Expression-7@2x.png"; sourceTree = "<group>"; };
+		FC80A01C175536D50053D252 /* R3UI-Expression-8@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "R3UI-Expression-8@2x.png"; sourceTree = "<group>"; };
+		FC80A01D175536D50053D252 /* R3UI-Dpad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "R3UI-Dpad.png"; sourceTree = "<group>"; };
+		FCDABFC7174EF6640084D609 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		FCDABFC9174EF8660084D609 /* ReceiveController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReceiveController.h; sourceTree = "<group>"; };
+		FCDABFCA174EF8670084D609 /* ReceiveController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReceiveController.m; sourceTree = "<group>"; };
+		FCDABFCB174EF8670084D609 /* ReceiveServerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReceiveServerController.h; sourceTree = "<group>"; };
+		FCDABFCC174EF8670084D609 /* ReceiveServerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReceiveServerController.m; sourceTree = "<group>"; };
+		FCDABFCD174EF8670084D609 /* SendServerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SendServerController.h; sourceTree = "<group>"; };
+		FCDABFCE174EF8670084D609 /* SendServerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SendServerController.m; sourceTree = "<group>"; };
 		FE0F52C2174DB2D30069AA51 /* RomoMessenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RomoMessenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE0F52C5174DB2D30069AA51 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FE0F52C7174DB2D30069AA51 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FE0F52C9174DB2D30069AA51 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		FE0F52CD174DB2D30069AA51 /* RomoMessenger-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RomoMessenger-Info.plist"; sourceTree = "<group>"; };
-		FE0F52CF174DB2D30069AA51 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FE0F52D1174DB2D30069AA51 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FE0F52D3174DB2D30069AA51 /* RomoMessenger-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RomoMessenger-Prefix.pch"; sourceTree = "<group>"; };
 		FE0F52D4174DB2D30069AA51 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -59,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCDABFC8174EF6640084D609 /* CFNetwork.framework in Frameworks */,
 				FE0F52C6174DB2D30069AA51 /* UIKit.framework in Frameworks */,
 				FE0F52C8174DB2D30069AA51 /* Foundation.framework in Frameworks */,
 				FE0F52CA174DB2D30069AA51 /* CoreGraphics.framework in Frameworks */,
@@ -68,6 +109,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC7213A2174DC0C200B65643 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FC7213A3174DC0C200B65643 /* NetworkManager.h */,
+				FC7213A4174DC0C200B65643 /* NetworkManager.m */,
+				FC7213A5174DC0C200B65643 /* QNetworkAdditions.h */,
+				FC7213A6174DC0C200B65643 /* QNetworkAdditions.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		FC80A00E175536D50053D252 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				FC80A00F175536D50053D252 /* images */,
+				FC80A01D175536D50053D252 /* R3UI-Dpad.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		FC80A00F175536D50053D252 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				FC80A010175536D50053D252 /* R3UI-Expression-10@2x.png */,
+				FC80A011175536D50053D252 /* R3UI-Expression-12@2x.png */,
+				FC80A012175536D50053D252 /* R3UI-Expression-14@2x.png */,
+				FC80A013175536D50053D252 /* R3UI-Expression-15@2x.png */,
+				FC80A014175536D50053D252 /* R3UI-Expression-19@2x.png */,
+				FC80A015175536D50053D252 /* R3UI-Expression-1@2x.png */,
+				FC80A016175536D50053D252 /* R3UI-Expression-2@2x.png */,
+				FC80A017175536D50053D252 /* R3UI-Expression-3@2x.png */,
+				FC80A018175536D50053D252 /* R3UI-Expression-4@2x.png */,
+				FC80A019175536D50053D252 /* R3UI-Expression-5@2x.png */,
+				FC80A01A175536D50053D252 /* R3UI-Expression-6@2x.png */,
+				FC80A01B175536D50053D252 /* R3UI-Expression-7@2x.png */,
+				FC80A01C175536D50053D252 /* R3UI-Expression-8@2x.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		FCDABF77174EE52F0084D609 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FC80A00E175536D50053D252 /* images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		FE0F52B9174DB2D30069AA51 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +177,7 @@
 		FE0F52C4174DB2D30069AA51 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FCDABFC7174EF6640084D609 /* CFNetwork.framework */,
 				FE0F52C5174DB2D30069AA51 /* UIKit.framework */,
 				FE0F52C7174DB2D30069AA51 /* Foundation.framework */,
 				FE0F52C9174DB2D30069AA51 /* CoreGraphics.framework */,
@@ -102,7 +192,9 @@
 				FE0F52D5174DB2D30069AA51 /* AppDelegate.m */,
 				FE0F52F8174DBACB0069AA51 /* RomoController */,
 				FE0F52FF174DBACB0069AA51 /* SendController */,
+				FC7213A2174DC0C200B65643 /* Utils */,
 				FE0F52CC174DB2D30069AA51 /* Supporting Files */,
+				FCDABF77174EE52F0084D609 /* Resources */,
 			);
 			path = RomoMessenger;
 			sourceTree = "<group>";
@@ -111,7 +203,6 @@
 			isa = PBXGroup;
 			children = (
 				FE0F52CD174DB2D30069AA51 /* RomoMessenger-Info.plist */,
-				FE0F52CE174DB2D30069AA51 /* InfoPlist.strings */,
 				FE0F52D1174DB2D30069AA51 /* main.m */,
 				FE0F52D3174DB2D30069AA51 /* RomoMessenger-Prefix.pch */,
 				FE0F52D7174DB2D30069AA51 /* Default.png */,
@@ -143,6 +234,12 @@
 				FE0F5303174DBACB0069AA51 /* SendViewController.h */,
 				FE0F5304174DBACB0069AA51 /* SendViewController.m */,
 				FE0F5305174DBACB0069AA51 /* SendViewController.xib */,
+				FCDABFC9174EF8660084D609 /* ReceiveController.h */,
+				FCDABFCA174EF8670084D609 /* ReceiveController.m */,
+				FCDABFCB174EF8670084D609 /* ReceiveServerController.h */,
+				FCDABFCC174EF8670084D609 /* ReceiveServerController.m */,
+				FCDABFCD174EF8670084D609 /* SendServerController.h */,
+				FCDABFCE174EF8670084D609 /* SendServerController.m */,
 			);
 			path = SendController;
 			sourceTree = "<group>";
@@ -198,7 +295,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE0F52D0174DB2D30069AA51 /* InfoPlist.strings in Resources */,
 				FE0F52D8174DB2D30069AA51 /* Default.png in Resources */,
 				FE0F52DA174DB2D30069AA51 /* Default@2x.png in Resources */,
 				FE0F52DC174DB2D30069AA51 /* Default-568h@2x.png in Resources */,
@@ -206,6 +302,20 @@
 				FE0F5309174DBACB0069AA51 /* RomoViewController.xib in Resources */,
 				FE0F530B174DBACB0069AA51 /* SendSettingsViewController.xib in Resources */,
 				FE0F530D174DBACB0069AA51 /* SendViewController.xib in Resources */,
+				FC80A01E175536D50053D252 /* R3UI-Expression-10@2x.png in Resources */,
+				FC80A01F175536D50053D252 /* R3UI-Expression-12@2x.png in Resources */,
+				FC80A020175536D50053D252 /* R3UI-Expression-14@2x.png in Resources */,
+				FC80A021175536D50053D252 /* R3UI-Expression-15@2x.png in Resources */,
+				FC80A022175536D50053D252 /* R3UI-Expression-19@2x.png in Resources */,
+				FC80A023175536D50053D252 /* R3UI-Expression-1@2x.png in Resources */,
+				FC80A024175536D50053D252 /* R3UI-Expression-2@2x.png in Resources */,
+				FC80A025175536D50053D252 /* R3UI-Expression-3@2x.png in Resources */,
+				FC80A026175536D50053D252 /* R3UI-Expression-4@2x.png in Resources */,
+				FC80A027175536D50053D252 /* R3UI-Expression-5@2x.png in Resources */,
+				FC80A028175536D50053D252 /* R3UI-Expression-6@2x.png in Resources */,
+				FC80A029175536D50053D252 /* R3UI-Expression-7@2x.png in Resources */,
+				FC80A02A175536D50053D252 /* R3UI-Expression-8@2x.png in Resources */,
+				FC80A02B175536D50053D252 /* R3UI-Dpad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,21 +332,12 @@
 				FE0F5308174DBACB0069AA51 /* RomoViewController.m in Sources */,
 				FE0F530A174DBACB0069AA51 /* SendSettingsViewController.m in Sources */,
 				FE0F530C174DBACB0069AA51 /* SendViewController.m in Sources */,
+				FC7213A7174DC0C200B65643 /* NetworkManager.m in Sources */,
+				FC7213A8174DC0C200B65643 /* QNetworkAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		FE0F52CE174DB2D30069AA51 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FE0F52CF174DB2D30069AA51 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		FE0F52E9174DB2D40069AA51 /* Debug */ = {
@@ -338,6 +439,7 @@
 				FE0F52ED174DB2D40069AA51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

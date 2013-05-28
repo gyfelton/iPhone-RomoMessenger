@@ -29,7 +29,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    [self switchToRomoViewController];
+    [self switchToSendViewController];
     [self.window makeKeyAndVisible];
     return YES;
 }
