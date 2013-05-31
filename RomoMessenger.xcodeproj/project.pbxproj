@@ -62,12 +62,6 @@
 		FC80A01C175536D50053D252 /* R3UI-Expression-8@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "R3UI-Expression-8@2x.png"; sourceTree = "<group>"; };
 		FC80A01D175536D50053D252 /* R3UI-Dpad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "R3UI-Dpad.png"; sourceTree = "<group>"; };
 		FCDABFC7174EF6640084D609 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		FCDABFC9174EF8660084D609 /* ReceiveController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReceiveController.h; sourceTree = "<group>"; };
-		FCDABFCA174EF8670084D609 /* ReceiveController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReceiveController.m; sourceTree = "<group>"; };
-		FCDABFCB174EF8670084D609 /* ReceiveServerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReceiveServerController.h; sourceTree = "<group>"; };
-		FCDABFCC174EF8670084D609 /* ReceiveServerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReceiveServerController.m; sourceTree = "<group>"; };
-		FCDABFCD174EF8670084D609 /* SendServerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SendServerController.h; sourceTree = "<group>"; };
-		FCDABFCE174EF8670084D609 /* SendServerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SendServerController.m; sourceTree = "<group>"; };
 		FE0F52C2174DB2D30069AA51 /* RomoMessenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RomoMessenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE0F52C5174DB2D30069AA51 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FE0F52C7174DB2D30069AA51 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -234,12 +228,6 @@
 				FE0F5303174DBACB0069AA51 /* SendViewController.h */,
 				FE0F5304174DBACB0069AA51 /* SendViewController.m */,
 				FE0F5305174DBACB0069AA51 /* SendViewController.xib */,
-				FCDABFC9174EF8660084D609 /* ReceiveController.h */,
-				FCDABFCA174EF8670084D609 /* ReceiveController.m */,
-				FCDABFCB174EF8670084D609 /* ReceiveServerController.h */,
-				FCDABFCC174EF8670084D609 /* ReceiveServerController.m */,
-				FCDABFCD174EF8670084D609 /* SendServerController.h */,
-				FCDABFCE174EF8670084D609 /* SendServerController.m */,
 			);
 			path = SendController;
 			sourceTree = "<group>";

@@ -18,7 +18,9 @@ enum {
 
 
 @interface SendViewController () <NSStreamDelegate>
-
+{
+    NSString *_emotionChosen;
+}
 
 // stuff for IB
 
@@ -52,7 +54,6 @@ enum {
 
 
 
-
 @end
 
 @implementation SendViewController
@@ -72,7 +73,6 @@ enum {
 
 @synthesize textView;
 @synthesize accessoryView;
-
 
 #pragma mark * Status management
 
@@ -246,9 +246,7 @@ enum {
 // send button
 - (IBAction)cancelAction:(id)sender
 {
-#pragma unused(sender)
-    
-    [self startSend:self.textView.text];
+    [self startSend:[_emotionChosen stringByAppendingString:self.textView.text]];
     self.messageSent.text = self.textView.text;//only last message sent
 }
 
@@ -301,9 +299,8 @@ enum {
 {
     if ([sender isKindOfClass:[UIButton class]]) {
         UIButton *btn = (UIButton*)sender;
-       //NSString *emotionChosen = [NSString stringWithFormat:@"%@%d", @"romo://", btn.tag];
-             
-        //self.messageSent.text = [NSString stringWithFormat:@"%@%d", @"romo://", btn.tag];
+        _emotionChosen = [NSString stringWithFormat:@"%@%d", @"romo://", btn.tag];
+       // self.messageSent.text = [NSString stringWithFormat:@"%@%d", @"romo://", btn.tag];
         self.EmotionPreview.image = [UIImage imageNamed:[NSString stringWithFormat:@"R3UI-Expression-%d@2x.png",btn.tag]];
     }
 }
@@ -336,7 +333,7 @@ enum {
 -(IBAction)directionControl:(id)sender{
     if ([sender isKindOfClass:[UIButton class]]) {
         UIButton *btn = (UIButton*)sender;
-        [self startSend:[NSString stringWithFormat:@"%@%d", @"driveAction", btn.tag]];
+        [self startSend:[NSString stringWithFormat:@"%@%d", @"driveAction://", btn.tag]];
     }
 }
 
