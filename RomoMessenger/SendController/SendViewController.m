@@ -2,9 +2,9 @@
 //  MainViewController.m
 //  RomoMessenger
 //
-//  Created by Yuanfeng on 2013-05-22.
+//  Created by Irene on 2013-05-22.
 //  Copyright (c) 2013 University of Waterloo. All rights reserved.
-//
+//  Based on Stream Example from Apple
 
 
 
@@ -12,6 +12,7 @@
 #import "QNetworkAdditions.h"
 
 #import "SendViewController.h"
+
 enum {
     kSendBufferSize = 32768
 };
@@ -22,22 +23,18 @@ enum {
     NSString *_emotionChosen;
 }
 
-// stuff for IB
-
+// IBOutlets
 @property (nonatomic, strong, readwrite) IBOutlet UILabel *                   statusLabel;
 @property (nonatomic, strong, readwrite) IBOutlet UIActivityIndicatorView *   activityIndicator;
-//changed to send button
-@property (nonatomic, strong, readwrite) IBOutlet UIButton *cancelButton;
-
+@property (nonatomic, strong, readwrite) IBOutlet UIButton *sendButton;
 @property (nonatomic, strong, readwrite) IBOutlet UITextView *textView;
 @property (nonatomic,strong, readwrite) IBOutlet UILabel *messageSent;
 @property (nonatomic,strong, readwrite) IBOutlet UIView *accessoryView;
-
 @property (weak, nonatomic) IBOutlet UIImageView *EmotionPreview;
 
 
 
-- (IBAction)cancelAction:(id)sender; 
+- (IBAction)onSendButtonClicked:(id)sender;
 - (IBAction)clearButtonClicked:(id)sender;
 - (IBAction)viewEmotion:(id)sender;
 
@@ -49,7 +46,7 @@ enum {
 @property (nonatomic, assign, readonly ) uint8_t *          buffer;
 @property (nonatomic, assign, readwrite) size_t             bufferOffset;
 @property (nonatomic, assign, readwrite) size_t             bufferLimit;
-@property (nonatomic, assign) BOOL          EmotionButtonStatus;
+@property (nonatomic, assign) BOOL emotionButtonStatus;
 
 
 
@@ -68,13 +65,13 @@ enum {
 
 @synthesize statusLabel       = _statusLabel;
 @synthesize activityIndicator = _activityIndicator;
-@synthesize cancelButton      = _stopButton;
+@synthesize sendButton      = _stopButton;
 
 
 @synthesize textView;
 @synthesize accessoryView;
 
-#pragma mark * Status management
+#pragma mark - Status management
 
 
 // These methods are used by the core transfer code to update the UI.
@@ -82,7 +79,7 @@ enum {
 - (void)sendDidStart
 {
     self.statusLabel.text = @"Sending";
-    self.cancelButton.enabled = YES;
+    self.sendButton.enabled = YES;
     [self.activityIndicator startAnimating];
     [[NetworkManager sharedInstance] didStartNetworkOperation];
 }
@@ -99,12 +96,12 @@ enum {
         statusString = @"Send succeeded";
     }
     self.statusLabel.text = statusString;
-    self.cancelButton.enabled = YES;
+    self.sendButton.enabled = YES;
     [self.activityIndicator stopAnimating];
     [[NetworkManager sharedInstance] didStopNetworkOperation];
 }
 
-#pragma mark * Core transfer code
+#pragma mark - Core transfer code
 
 // This is the code that actually does the networking.
 
@@ -121,19 +118,29 @@ enum {
     return (self.networkStream != nil);
 }
 
-- (void)startSend:(NSString *)text
+- (void)sendText:(NSString *)text
 {
     NSOutputStream *    output;
     BOOL                success;
     NSNetService *      netService;
-    
-    
-    assert(self.networkStream == nil);      // don't tap send twice in a row!
-    assert(self.fileStream == nil);         // ditto
+    NSString *textToSend = [text copy];
+    if (self.networkStream) {
+        NSLog(@"Sending is in progress as self.networkStream is not nil. Returning");
+        return;
+    }
+    if (self.fileStream) {
+        NSLog(@"Sending is in progress as fileStream is not nil. Returning");
+        return;
+    }
+  
+    if (!textToSend || [textToSend isEqualToString:@""]) {
+        NSLog(@"Text is nil or empty, need to initialize fileStream with something. Setting text to a space.");
+        textToSend = @" ";
+    }
     
     // Open a stream for the file we're going to send.
     
-    self.fileStream = [[NSInputStream alloc] initWithData:[text dataUsingEncoding:NSUTF8StringEncoding]];
+    self.fileStream = [[NSInputStream alloc] initWithData:[textToSend dataUsingEncoding:NSUTF8StringEncoding]];
     assert(self.fileStream != nil);
     
     [self.fileStream open];
@@ -158,7 +165,6 @@ enum {
     [self.networkStream open];
     
     // Tell the UI we're sending.
-    
     [self sendDidStart];
 }
 
@@ -244,13 +250,11 @@ enum {
 
 
 // send button
-- (IBAction)cancelAction:(id)sender
+- (IBAction)onSendButtonClicked:(id)sender
 {
-    [self startSend:[_emotionChosen stringByAppendingString:self.textView.text]];
+    [self sendText:[_emotionChosen stringByAppendingString:self.textView.text]];
     self.messageSent.text = self.textView.text;//only last message sent
 }
-
-
 
 - (IBAction)clearButtonClicked:(id)sender
 {
@@ -264,16 +268,16 @@ enum {
     [super viewDidLoad];
     assert(self.statusLabel != nil);
     assert(self.activityIndicator != nil);
-    assert(self.cancelButton != nil);
+    assert(self.sendButton != nil);
     
     self.activityIndicator.hidden = YES;
     self.statusLabel.text = @"Type text then press start to send";
-    self.cancelButton.enabled = YES;
-    [self.cancelButton setTitle:@"Send" forState:UIControlStateNormal];
+    self.sendButton.enabled = YES;
+    [self.sendButton setTitle:@"Send" forState:UIControlStateNormal];
     
     self.textView.inputAccessoryView = self.accessoryView;
     
-    
+    _emotionChosen = @"";
 }
 
 - (void)viewDidUnload
@@ -282,7 +286,7 @@ enum {
     [super viewDidUnload];
     self.statusLabel = nil;
     self.activityIndicator = nil;
-    self.cancelButton = nil;
+    self.sendButton = nil;
     self.textView = nil;
     self.accessoryView = nil;
 
@@ -292,8 +296,6 @@ enum {
 {
     [self stopSendWithStatus:@"Stopped"];
 }
-
-
 
 - (IBAction)onExpressionClicked:(id)sender
 {
@@ -305,18 +307,19 @@ enum {
     }
 }
 
-
-
 - (IBAction)viewEmotion:(id)sender
 {
-    if (_EmotionButtonStatus == YES){
-        _EmotionButtonStatus = NO;
+    UIBarButtonItem *item = (UIBarButtonItem*)sender;
+    if (self.emotionButtonStatus == YES){
+        self.emotionButtonStatus = NO;
         self.textView.inputView = self.inputView;
         [self.textView reloadInputViews];
+        [item setTitle:@"Emotions"];
     }else{
         self.textView.inputView = _expressionKeyboard;
         [self.textView reloadInputViews];
-        _EmotionButtonStatus = YES;
+        self.emotionButtonStatus = YES;
+        [item setTitle:@"Keyboard"];
     }
     
 }
@@ -325,22 +328,19 @@ enum {
     [textView resignFirstResponder];
 }
 
-
-
-
 //four drive actions with tag integer 1 for up, 2 for left, 3 for right, 4 for down
 //touch down
 -(IBAction)directionControl:(id)sender{
     if ([sender isKindOfClass:[UIButton class]]) {
         UIButton *btn = (UIButton*)sender;
-        [self startSend:[NSString stringWithFormat:@"%@%d", @"driveAction://", btn.tag]];
+        [self sendText:[NSString stringWithFormat:@"%@%d", @"driveAction://", btn.tag]];
     }
 }
 
 -(IBAction)driveControlCancelled:(id)sender
 {
     //touch up inside
-    [self startSend:@"stopAction"];
+    [self sendText:@"stopAction"];
 }
 
 
