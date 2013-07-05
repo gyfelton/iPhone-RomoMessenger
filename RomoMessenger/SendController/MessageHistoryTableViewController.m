@@ -124,7 +124,7 @@
 }
 
 - (BOOL)addNewMessage:(NSString *)message{
-    if(message != @""){
+    if(![message isEqualToString:@""] ){
         [_messageHistoryArray insertObject:message atIndex:0];
         [self.tableView reloadData];
         return YES;
