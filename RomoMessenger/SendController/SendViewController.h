@@ -9,7 +9,8 @@
 #import "SendSettingsViewController.h"
 #import <UIKit/UIKit.h>
 
-@interface SendViewController : UIViewController <SendSettingsViewControllerDelegate>
+@interface SendViewController :
+    UIViewController <SendSettingsViewControllerDelegate>
 {
     IBOutlet UIView *_expressionKeyboard;
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC3B19761784B6CA006D1831 /* MessageHistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3B19741784B6CA006D1831 /* MessageHistoryTableViewController.m */; };
+		FC3B19771784B6CA006D1831 /* MessageHistoryTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC3B19751784B6CA006D1831 /* MessageHistoryTableViewController.xib */; };
 		FC7213A7174DC0C200B65643 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FC7213A4174DC0C200B65643 /* NetworkManager.m */; };
 		FC7213A8174DC0C200B65643 /* QNetworkAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FC7213A6174DC0C200B65643 /* QNetworkAdditions.m */; };
 		FC80A01E175536D50053D252 /* R3UI-Expression-10@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC80A010175536D50053D252 /* R3UI-Expression-10@2x.png */; };
@@ -43,6 +45,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC3B19731784B6CA006D1831 /* MessageHistoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageHistoryTableViewController.h; sourceTree = "<group>"; };
+		FC3B19741784B6CA006D1831 /* MessageHistoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageHistoryTableViewController.m; sourceTree = "<group>"; };
+		FC3B19751784B6CA006D1831 /* MessageHistoryTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageHistoryTableViewController.xib; sourceTree = "<group>"; };
 		FC7213A3174DC0C200B65643 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
 		FC7213A4174DC0C200B65643 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 		FC7213A5174DC0C200B65643 /* QNetworkAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNetworkAdditions.h; sourceTree = "<group>"; };
@@ -228,6 +233,9 @@
 				FE0F5303174DBACB0069AA51 /* SendViewController.h */,
 				FE0F5304174DBACB0069AA51 /* SendViewController.m */,
 				FE0F5305174DBACB0069AA51 /* SendViewController.xib */,
+				FC3B19731784B6CA006D1831 /* MessageHistoryTableViewController.h */,
+				FC3B19741784B6CA006D1831 /* MessageHistoryTableViewController.m */,
+				FC3B19751784B6CA006D1831 /* MessageHistoryTableViewController.xib */,
 			);
 			path = SendController;
 			sourceTree = "<group>";
@@ -304,6 +312,7 @@
 				FC80A029175536D50053D252 /* R3UI-Expression-7@2x.png in Resources */,
 				FC80A02A175536D50053D252 /* R3UI-Expression-8@2x.png in Resources */,
 				FC80A02B175536D50053D252 /* R3UI-Dpad.png in Resources */,
+				FC3B19771784B6CA006D1831 /* MessageHistoryTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +331,7 @@
 				FE0F530C174DBACB0069AA51 /* SendViewController.m in Sources */,
 				FC7213A7174DC0C200B65643 /* NetworkManager.m in Sources */,
 				FC7213A8174DC0C200B65643 /* QNetworkAdditions.m in Sources */,
+				FC3B19761784B6CA006D1831 /* MessageHistoryTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

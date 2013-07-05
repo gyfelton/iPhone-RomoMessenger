@@ -12,6 +12,7 @@
 #import "QNetworkAdditions.h"
 
 #import "SendViewController.h"
+#import "MessageHistoryTableViewController.h"
 
 enum {
     kSendBufferSize = 32768
@@ -19,6 +20,7 @@ enum {
 
 
 @interface SendViewController () <NSStreamDelegate>
+
 {
     NSString *_emotionChosen;
 }
@@ -30,7 +32,7 @@ enum {
 @property (nonatomic, strong, readwrite) IBOutlet UITextView *textView;
 @property (nonatomic,strong, readwrite) IBOutlet UILabel *messageSent;
 @property (nonatomic,strong, readwrite) IBOutlet UIView *accessoryView;
-@property (weak, nonatomic) IBOutlet UIImageView *EmotionPreview;
+@property (weak, nonatomic) IBOutlet UIImageView *emotionPreview;
 
 
 
@@ -253,7 +255,8 @@ enum {
 - (IBAction)onSendButtonClicked:(id)sender
 {
     [self sendText:[_emotionChosen stringByAppendingString:self.textView.text]];
-    self.messageSent.text = self.textView.text;//only last message sent
+    //self.messageSent.text = self.textView.text;
+    
 }
 
 - (IBAction)clearButtonClicked:(id)sender
@@ -303,7 +306,7 @@ enum {
         UIButton *btn = (UIButton*)sender;
         _emotionChosen = [NSString stringWithFormat:@"%@%d", @"romo://", btn.tag];
        // self.messageSent.text = [NSString stringWithFormat:@"%@%d", @"romo://", btn.tag];
-        self.EmotionPreview.image = [UIImage imageNamed:[NSString stringWithFormat:@"R3UI-Expression-%d@2x.png",btn.tag]];
+        self.emotionPreview.image = [UIImage imageNamed:[NSString stringWithFormat:@"R3UI-Expression-%d@2x.png",btn.tag]];
     }
 }
 
@@ -322,6 +325,9 @@ enum {
         [item setTitle:@"Keyboard"];
     }
     
+}
+- (IBAction)clearEmotion:(id)sender {
+    _emotionChosen =@"";
 }
 
 - (IBAction)doneButton:(id)sender {
@@ -358,5 +364,11 @@ enum {
     controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     [self presentViewController:controller animated:YES completion:nil];
 }
+
+
+
+
+
+
 
 @end
